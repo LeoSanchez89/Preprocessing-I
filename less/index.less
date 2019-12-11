@@ -19,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -30,7 +29,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	/*line-height: 1;*/
+	padding:2%;
 }
 ol, ul {
 	list-style: none;
@@ -52,24 +52,92 @@ table {
 * {
 	box-sizing: border-box;
 	
-}
-
-body{
-	padding: 2%;
+	line-height:2;	
 }
 
 html, body {
     height: 100%;
 }
 
+nav{
+	display:flex;
+	flex-direction:row-reverse;
+	
+	.navbar{
+		width: 50%;
+		display:flex;
+		justify-content:space-between;
+
+		a:hover{
+			color:grey;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		color: red;
+		font-size: 1.25rem;
+		padding-bottom:3%;
+	}
+}
+
+header{
+	display:flex;
+	width:100%;
+	flex-direction: row;
+	background-color: grey;
+	height: 60vh;
+	justify-content: space-around;
+	
+
+	.title{
+		display:flex;
+		align-items:center;
+		width: 40%;
+	}
+
+	.header-text{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align:center;
+		width: 58%;
+		padding:1%;
+
+		h2{
+			color:white;
+		}
+
+		p{
+			color:white;
+			margin-top:2%;
+			margin-bottom:2%;
+			font-size: 1.2rem
+		}
+	}
+	
+}
+
 h1{
 	color:black;
-	font-size: 2rem;
+	font-size: 5rem;
+	
+	text-align: center;
 }
+h2{
+	color: black;
+	font-size: 2.5rem;
+}
+h3{
+	color: black;
+	font-size: 1.5rem;
+}
+
 i{
 	color:red;
 	font-size: 5rem;
 }
+
 hr{
-	border:1px dashed black;
-}
+	border:1px dashed black;	
+}	
