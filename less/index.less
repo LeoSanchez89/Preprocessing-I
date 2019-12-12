@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'Noto Sans', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -53,6 +53,7 @@ table {
 @main-color: #2d132c;
 @accent-color: #c72c41;
 
+
 .center(){
 	display:flex;
 	justify-content: center;
@@ -60,7 +61,7 @@ table {
 
 * {
 	box-sizing: border-box;
-	line-height:2;	
+	line-height:1.5;	
 }
 
 html, body {
@@ -70,11 +71,14 @@ html, body {
 nav{
 	display:flex;
 	flex-direction:row-reverse;
-	
+
 	.navbar{
 		width: 50%;
 		display:flex;
 		justify-content:space-between;
+		@media(max-width: 500px){
+			width: 100%;
+		}
 
 		a:hover{
 			color:grey;
@@ -86,23 +90,35 @@ nav{
 		color: @accent-color;
 		font-size: 1.25rem;
 		padding-bottom:3%;
-		text-shadow: 1px 1px 3px @main-color
-		
-	}
+		text-shadow: 1px 1px 3px @main-color;
+		}
 }
 
 header{
 	display:flex;
 	flex-direction: row;
-	background-color: grey;
 	height: 60vh;
 	justify-content: space-around;
+	@media(max-width: 500px){
+		flex-wrap:wrap;
+		justify-content: unset;
+		
+	}
 	
-
+	
 	.title{
 		display:flex;
 		align-items:center;
 		width: 40%;
+		@media(max-width: 500px){
+			width:100%;
+			justify-content: center;
+			align-items: center;
+		}
+		h1{
+			font-size:3rem;
+			margin:0;
+		}
 	}
 
 	.header-text{
@@ -111,6 +127,19 @@ header{
 		text-align:center;
 		width: 58%;
 		padding:1%;
+		@media(max-width: 500px){
+			padding:0;
+			margin:0;
+			width:100%;
+			height: 60vh;
+			h2{
+				font-size: 2rem;
+			}	
+			p{
+				font-size:1rem;
+				line-height: 1;
+			}
+		}
 
 		h2{
 			color:@accent-color;
@@ -133,6 +162,7 @@ h1{
 	text-shadow: 1px 1px 4px @accent-color;
 	font-size: 5rem;
 	text-align: center;
+	padding-left:2%;
 }
 h2{
 	color: @main-color;
@@ -166,10 +196,17 @@ hr{
 	flex-wrap: wrap;
 	margin-top:3%;
 	margin-bottom: 3%;
+	@media(max-width: 500px){
+		flex-direction: column;
+		flex-wrap:none;
+	}
 	
 	.box{
 		width:37%;
 		padding:2%;
+		@media(max-width: 500px){
+			width: 100%;
+		}
 	}
 
 	p{
@@ -192,6 +229,9 @@ hr{
 		justify-content: space-evenly;
 		text-align: center;
 		background-color: @accent-color;
+		@media(max-width: 500px){
+			width: 33%;
+		}
 	}
 
 	h3,h4,p{
@@ -202,6 +242,10 @@ hr{
 	h3{
 		font-size: 1.2rem;
 		font-weight: bold;
+	}
+	
+	p{
+		font-size: 1rem;
 	}
 
 }
