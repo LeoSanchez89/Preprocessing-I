@@ -49,6 +49,9 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+@main-color: rgb(161, 0, 0);
+
 * {
 	box-sizing: border-box;
 	
@@ -75,15 +78,16 @@ nav{
 
 	a{
 		text-decoration: none;
-		color: red;
+		color: @main-color;
 		font-size: 1.25rem;
 		padding-bottom:3%;
+		
 	}
 }
 
 header{
 	display:flex;
-	width:100%;
+	
 	flex-direction: row;
 	background-color: grey;
 	height: 60vh;
@@ -105,14 +109,16 @@ header{
 		padding:1%;
 
 		h2{
-			color:white;
+			color:@main-color;
+			text-shadow: 1px 1px 2px white;;
 		}
 
 		p{
-			color:white;
+			color:@main-color;
 			margin-top:2%;
 			margin-bottom:2%;
-			font-size: 1.2rem
+			font-size: 1.2rem;
+			text-shadow: 1px 1px 2px white;
 		}
 	}
 	
@@ -134,10 +140,21 @@ h3{
 }
 
 i{
-	color:red;
+	color: @main-color;
 	font-size: 5rem;
 }
 
 hr{
 	border:1px dashed black;	
 }	
+
+.main-content{
+	
+	display:flex;
+	flex-wrap: wrap;
+	
+	.box{
+		width:45%
+	}
+
+}

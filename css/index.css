@@ -149,13 +149,12 @@ nav .navbar a:hover {
 }
 nav a {
   text-decoration: none;
-  color: red;
+  color: #a10000;
   font-size: 1.25rem;
   padding-bottom: 3%;
 }
 header {
   display: flex;
-  width: 100%;
   flex-direction: row;
   background-color: grey;
   height: 60vh;
@@ -175,13 +174,15 @@ header .header-text {
   padding: 1%;
 }
 header .header-text h2 {
-  color: white;
+  color: #a10000;
+  text-shadow: 1px 1px 2px white;
 }
 header .header-text p {
-  color: white;
+  color: #a10000;
   margin-top: 2%;
   margin-bottom: 2%;
   font-size: 1.2rem;
+  text-shadow: 1px 1px 2px white;
 }
 h1 {
   color: black;
@@ -197,9 +198,16 @@ h3 {
   font-size: 1.5rem;
 }
 i {
-  color: red;
+  color: #a10000;
   font-size: 5rem;
 }
 hr {
   border: 1px dashed black;
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-content .box {
+  width: 45%;
 }
